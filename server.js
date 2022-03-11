@@ -113,6 +113,6 @@ const requestListener = (req, res)=>{
     }
 }
 
-// 建立server,埠號3005
+// 建立server,埠號3005(process.ent.PORT是Heroku的環境變數)
 const server = http.createServer(requestListener);
-server.listen(3005)
+server.listen(process.env.PORT || 3005)
